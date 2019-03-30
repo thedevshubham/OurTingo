@@ -1,0 +1,27 @@
+<div class="navbar-default">
+  <div class="navbar">
+    <div class="col-sm-2 logo">
+      <a href="#default" class="logo">Tingo</a>
+    </div>
+    <div class="col-sm-2 category"><a (click)="filter('Pcategories','Clothing')">Clothing</a></div>
+    <div class="col-sm-2 category"><a (click)="filter('Pcategories','Books')">Books</a></div>
+    <div class="col-sm-2 category"><a (click)="filter('Pcategories','Electronics')">Electronics</a></div>
+    
+    <div class="col-sm-2 category">
+      <div class="header-right">
+        <a href="javascript:void(0);"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Login/Signup</a>
+      </div>
+      <div class="dropdown">
+          <button (click)="getcart()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">cart</button>
+          <div *ngIf="showcart"  class="cartdata-show dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <div  class="dropdown-item cartdata"  *ngFor="let item of cartproducts" (click)="filter('Pcategories',item.Pcategories)" >{{item.Pcategories}}</div>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="header-right1">
+        <a href="javascript:void(0);" (click)="logout()"><i class="fa fa-power-off" aria-hidden="true"></i> Logout</a>
+      </div>
+    </div>
+  </div>
+</div>

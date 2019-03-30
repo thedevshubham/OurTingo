@@ -1,0 +1,94 @@
+body{
+    width: 98%;
+    margin-top: 14px;
+    
+}
+
+
+.maincontainer {
+    padding-bottom: 0px;
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    width: 390px;
+    margin-bottom: 10%;
+}
+.resultGiftBox {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    line-height: 1;
+}
+.result-giftbox-title[_ngcontent-c1] {
+    font-size: 14px;
+    color: #282b30;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left: 17px;
+    margin-top: -6px;
+    letter-spacing: 0.02em;
+    line-height: 14.5px;
+}
+.resultGiftBox[_ngcontent-c1] {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    padding: 33px;
+    line-height: 1;
+}
+.cartandwish[_ngcontent-c2] {
+    margin-left: 0px;
+    padding-top: 5px;
+}
+.result-giftbox-body {
+    padding-top: 8px;
+    position: relative;
+}
+.result-giftbox-title {
+    font-size: 16px;
+    color: #282b30;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left: 17px;
+    letter-spacing: 0.02em;
+    line-height: 14.5px;
+}
+.result-giftbox-price {
+    font-family: EuclidFlexLgt;
+    font-size: 11px;
+    margin-left: 17px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    margin-top: 2px;
+}
+a{
+    cursor: pointer;
+}
+.maincontainer:hover{
+    /* border: 1px solid; */
+  padding: 10px 10px;
+  background-color: white;
+  box-shadow: 5px 10px 15px 10px #888888;
+}
+.wishlist{
+    margin-right: 157px;
+    cursor: pointer;
+}
+.cart{
+  cursor: pointer;
+}
+.cartandwish{
+    margin-left: 0px;
+    padding-top: 1px;
+}
+
+.wishlist .cartandwish:hover {
+    color: #275850a4;
+}
+.cartandwish .a{
+    color: black;
+}

@@ -1,0 +1,33 @@
+.login{
+    margin-left: 30%;
+    margin-top: 5%;
+    margin-right: 30%;
+}
+.btn{
+align-content: center;
+}
+input.ng-dirty.ng-invalid {
+    color: red
+  }
+  .email_valid{
+      color: red;
+  }
+.field-icon{
+    float: right;
+    margin-top: -24px;
+    margin-right: 16px;
+}
+.spano{
+}
+.spant{
+    margin: 30%;
+}
+.spanth{
+    float: right;
+}
+input{
+    border-radius: 25px;
+}
+hr{
+    border-color:rgb(41, 94, 190);
+}

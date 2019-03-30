@@ -1,0 +1,46 @@
+{
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/*.css",
+          "/*.js"
+        ],
+        "urls":[
+          "https://tingo-b5483.firebaseio.com/products.json",
+           "https://tingo-b5483.firebaseio.com/cart.json",
+           "https://tingo-b5483.firebaseio.com/users.json"
+
+        ]
+      }
+    }, {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**",
+          "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+        ]
+      }
+    }
+  ],
+  "dataGroups":[
+    {
+      "name": "firebase-json",
+      "urls": [
+        "https://example-81cdf.firebaseio.com",
+        "https://example-81cdf.firebaseio.com/Users.json",
+        "https://example-81cdf.firebaseio.com/Posts.json"
+      ],
+      "cacheConfig":{
+        "strategy":"performance"
+      }
+    }
+  ]
+}

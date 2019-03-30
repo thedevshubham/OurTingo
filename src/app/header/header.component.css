@@ -1,0 +1,34 @@
+.navbar-default{
+    background-color: #1d2d3d;
+    height: 100%;
+}
+
+.navbar-default a{
+    color: white;
+
+}
+
+.logo {
+    font-size: 30px;
+    color: white;
+    margin-top: 20px;
+
+}
+
+.category{
+    margin-left: 0px;
+    padding-top: 13px;
+    padding: 10px;
+}
+
+.header-right {
+    text-align: center;
+    font-size: 15px;
+  }
+  .header-right1{
+      margin-top: 30px;
+  }
+  .header-right a{
+    color: white;
+  }
+  

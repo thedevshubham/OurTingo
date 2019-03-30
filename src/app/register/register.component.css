@@ -1,0 +1,24 @@
+
+.signup {
+    margin-left: 30%;
+    margin-top: 5%;
+    margin-right: 30%;
+}
+.btn{
+    align-content: center;
+    }
+input.ng-dirty.ng-invalid {
+    color: red
+  }
+  .spanone{
+
+  }
+  .spantwo{
+      margin-left: 30%;
+  }
+  input{
+    border-radius: 25px;
+}
+hr{
+    border-color:rgb(41, 94, 190);
+}

@@ -1,0 +1,58 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+
+<div class="w3-grey w3-animate-zoom" style="padding:20px 50px;
+background-size:cover;">
+
+    <div class="w3-section w3-row-padding">
+
+        <div class="w3-twothird">
+            <div class="w3-card-4">
+
+                <div class="w3-display-container">
+                    <div class="resultGiftBox img-zoom-container">
+                        <a>
+                            <img id="myimage" class="img-responsive"
+                                src="../../assets/pimage/product{{Pdetails[0].Pid}}.jpg" style="width:100%" />
+                        </a>
+                    </div>
+
+                    <div class="w3-display-bottomleft w3-container w3-xlarge w3-text-black">
+                        <p>{{Pdetails[0].Pcategories}}</p>
+                    </div>
+                </div>
+                <div>
+                    <span *ngFor="let item of arrystar(Pdetails[0].Prating); let i = index;" class="fa fa-star checked"
+                        style="color: orange;"></span>
+                </div>
+            </div>
+        </div>
+        <div id="myresult" class="w3-third w3-container w3-center img-zoom-result ">
+            <div>
+
+                <div class="detail_container">
+                    <div class="row2">
+                        <h1>{{Pdetails[0].Pname}}</h1>
+                        <hr>
+                        <h4>₹ {{Pdetails[0].Pprize }}</h4>
+                        <label>Description : {{ Pdetails[0].Pdescription}}</label>
+                        
+                        <label>Size </label>
+                        <div class="addtocart" >
+                            <h5>Buy Now</h5>
+                        </div>
+
+                        <!-- <div >
+                    <h2 class="w3-large">{{ Pdetails[0].Pname }} </h2>
+                    <h4 >{{ Pdetails[0].Pdescription}} </h4>
+                    <div><h6 >₹ {{ Pdetails[0].Pprize }} </h6></div>
+                    <div>Buy Now</div>
+                   
+                </div> -->
+                    </div>
+
+                </div>
+            </div>

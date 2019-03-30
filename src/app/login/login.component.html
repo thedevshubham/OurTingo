@@ -1,0 +1,106 @@
+<div>
+  <form class="login" [formGroup]="userLogin" (ngSubmit)="onSubmit()">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <div class="form-group">
+          <h3><b>Login Here</b></h3><br><br>
+          <label class="col-sm-4 control-label">Email</label>
+
+          <div class="col-sm-8">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="email"
+              placeholder="abc@xyz.com"
+              required
+              [(ngModel)]="email"
+            />
+            <div
+              *ngIf="
+                fieldValues.email.invalid &&
+                (fieldValues.email.dirty || fieldValues.email.touched)
+              "
+              class="alert"
+            >
+              <span
+                *ngIf="fieldValues.email.errors.required"
+                class="alert alert-danger"
+                >Email is required.</span
+              >
+              <!-- <div *ngIf="fieldValues.email.errors.email">Email is not valid.</div> -->
+              <span
+                *ngIf="fieldValues.email.errors.pattern"
+                class="alert alert-danger"
+              >
+                *Not a valid email
+              </span>
+            </div>
+          </div>
+        </div><br><br>
+
+        <div class="form-group">
+          <label class="col-sm-4 control-label">Password</label>
+          <div class="col-sm-8">
+            <span>
+              <input 
+              id="password"
+              type="{{isEyeClose ? 'password' : 'text'}}"
+              class="form-control pass"
+              formControlName="password"
+              required
+              [(ngModel)]="password"
+            />
+            </span>
+            <span class="fa fa-fw {{isEyeClose ? 'fa-eye':'fa-eye-slash'}} field-icon toggle-password" (click)="eyes()">
+            </span>
+
+            
+
+            <div
+              class="alert alert-danger"
+              *ngIf="
+                fieldValues.password.invalid &&
+                (fieldValues.password.dirty || fieldValues.password.touched)
+              "
+              class="alert"
+            >
+              <div
+                class="alert alert-danger"
+                *ngIf="fieldValues.password.errors.required"
+              >
+                Password is required.
+              </div>
+              <div
+                class="alert alert-danger"
+                *ngIf="fieldValues.password.errors.minlength"
+              >
+              Password length minimum 8
+            </div>
+            </div>
+            <br>
+            </div>
+            </div>
+            </div><hr>
+      <div class="click">
+        <span class="spano">
+        <a routerLink="/register" routerLinkActive="active">New User?</a>&nbsp;&nbsp;
+        </span>
+        <span class="spant">
+        <button
+        type="submit"
+        [disabled]="!userLogin.valid"
+        role="button"
+        class="btn btn-primary"
+        (click)="onSubmit()"
+        >
+        Login
+        </button>&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+        <span class="spanth">
+        <a (click)="gotoProductDetails(6189)" routerLinkActive="active">skip</a>&nbsp;&nbsp;
+        </span>
+        </div><br>
+        </div>
+        </form>
+        </div>
+        

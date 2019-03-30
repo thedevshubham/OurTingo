@@ -1,0 +1,38 @@
+<app-header></app-header>
+<app-carousel></app-carousel>
+<div>
+    <body class="body">
+        <div class="row">
+          <div class="col-md-4" *ngFor="let item of products">
+            <div class="maincontainer">
+              <div class="resultGiftBox">
+                <a>
+                  <img
+                    class="img-responsive"
+                    src="../../assets/pimage/product{{ item.Pid }}.jpg"
+                    (click)="gotoProductDetails(item.Pid)"
+                  />
+                </a>
+              </div>
+              <div class="result-giftbox-body">
+                <span class="result-giftbox-title">{{ item.Pname }}</span>
+                <div class="result-giftbox-price">
+                  <span>₹ {{ item.Pprize }} </span>
+                  <div>
+                  <span *ngFor="let item of arrystar(item.Prating); let i = index;" class="fa fa-star checked" style="color: orange;"></span>
+                  </div>
+                  <div class="cartandwish" *ngIf="displaywishlist" >
+                      <a class="wishlist"  >Wishlist: <i class='fa fa-heart' style='font-size:30px;'></i></a>
+                      <a class="cart" (click)="addtocart(item.Pid)" >Add to cart: <i class='fa fa-cart-plus' style='font-size:30px;'></i>
+                      </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- <div *ngFor="let item of getitems">{{ item.size }}</div> -->
+      </body>
+</div>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
